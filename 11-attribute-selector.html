@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Selector</title>
+
+    <style>
+      a[target="_blank"] {
+        color: red;
+      }
+
+      p[title~="belajar"] {
+        color: red;
+      }
+
+      h1[title|="belajar"] {
+        color: red;
+      }
+
+      h2[title^="belajar"] {
+        color: red;
+      }
+
+      h3[title$="belajar"] {
+        color: red;
+      }
+
+      h4[title*="belajar"] {
+        color: red;
+      }
+
+      /* Semua element yang memiliki title dengan value belajar dipilih */
+      /* [title="belajar"] {
+        color: red;
+      } */
+
+      /* Bisa juga dikombinasikan dengan id atau class */
+      /* .red-class[title="belajar"] {
+        color: red;
+      }
+
+      #red-id[title="belajar"] {
+        color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <a href="https://www.google.com" target="_blank">Google</a>
+    <a href="https://www.facebook.com">Facebook</a>
+    <a href="https://www.instagram.com" target="_self">Instagram</a>
+    <a href="https://www.twitter.com">Twitter</a>
+
+    <p title="belajar pemrograman">Ini dipilih</p>
+    <p title="belajarpemrograman">Ini tidak dipilih</p>
+
+    <h1 title="belajar">Ini dipilih</h1>
+    <h1 title="belajar pemrograman">Ini tidak dipilih</h1>
+    <h1 title="belajarpemrograman">Ini tidak dipilih</h1>
+    <h1 title="belajar-pemrograman">Ini dipilih</h1>
+
+    <h2 title="belajar">Ini dipilih</h2>
+    <h2 title="belajar pemrograman">Ini dipilih</h2>
+    <h2 title="belajarpemrograman">Ini dipilih</h2>
+    <h2 title="belajar-pemrograman">Ini dipilih</h2>
+    <h2 title="pemrograman belajar">Ini tidak dipilih</h2>
+
+    <h3 title="belajar pemrograman">Ini tidak dipilih</h3>
+    <h3 title="belajarpemrograman">Ini tidak dipilih</h3>
+    <h3 title="belajar-pemrograman">Ini tidak dipilih</h3>
+    <h3 title="pemrograman belajar">Ini dipilih</h3>
+
+    <h4 title="belajar">Ini dipilih</h4>
+    <h4 title="belajar pemrograman">Ini dipilih</h4>
+    <h4 title="belajarpemrograman">Ini dipilih</h4>
+    <h4 title="belajar-pemrograman">Ini dipilih</h4>
+    <h4 title="pemrograman belajar">Ini dipilih</h4>
+  </body>
+</html>
