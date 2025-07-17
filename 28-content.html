@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content</title>
+
+    <style>
+      .content::before {
+        content: "Hello, ";
+      }
+
+      .content::after {
+        content: " bro!";
+      }
+
+      /* 
+      Tidak bisa
+      .content {
+        content: "Hello, bro!";
+      }
+
+      Bisa
+      .content {
+        content: url("css-logo.svg");
+      }
+      */
+    </style>
+  </head>
+  <body>
+    <p class="content">Ini adalah paragraf</p>
+  </body>
+</html>

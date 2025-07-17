@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layer</title>
+
+    <style>
+      /* Layer yang dieksekusi terlebih dahulu utilities lalu base sehingga h2 akan berwarna red */
+      @layer utilities, base;
+
+      h1 {
+        color: burlywood;
+      }
+
+      @layer base {
+        h2 {
+          color: red;
+        }
+      }
+
+      @layer utilities {
+        h2 {
+          color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <h2>Belajar css layer</h2>
+  </body>
+</html>
